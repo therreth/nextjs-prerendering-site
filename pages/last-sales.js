@@ -4,7 +4,7 @@ function LastSalesPage(props) {
   const [sales, setSales] = useState(props.sales);
   //   const [isLoading, setLoading] = useState(false);
 
-  const { data, error } = userSWR("DBurl");
+  const { data, error } = useSWR("DBurl");
   useEffect(() => {
     if (data) {
       const transformedSales = [];
